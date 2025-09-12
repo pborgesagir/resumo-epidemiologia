@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resumo de Estudos Epidemiológicos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Efeito de linha conectora para o fluxograma */
+        .flow-branch {
+            position: relative;
+        }
+        .flow-branch::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: -24px; /* Ajuste a distância da linha */
+            width: 24px;
+            height: 2px;
+            background-color: #94a3b8;
+        }
+        .flow-main::before {
+             content: '';
+            position: absolute;
+            top: 25px;
+            left: -48px; 
+            width: 48px;
+            height: 2px;
+            background-color: #94a3b8;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+<div class="container mx-auto p-4 md:p-8">
+    <header class="text-center mb-10">
+        <h1 class="text-3xl md:text-4xl font-bold text-slate-800">Mapa Mental: Tipos de Estudos Epidemiológicos</h1>
+        <p class="text-slate-600 mt-2">Seu guia rápido para a prova!</p>
+    </header>
+
+    <!-- INCIDÊNCIA VS PREVALÊNCIA -->
+    <section id="incidencia_prevalencia" class="mb-12">
+        <h2 class="text-2xl font-bold text-slate-700 border-b-2 border-slate-300 pb-2 mb-6">Conceitos Fundamentais</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-white p-6 rounded-xl shadow-md border border-gray-200">
+                <h3 class="text-xl font-bold text-cyan-700 mb-3">Incidência 🎥</h3>
+                <p class="mb-4">Mede a frequência de <strong>casos NOVOS</strong> de uma doença em uma população durante um período de tempo específico. É um indicador de risco.</p>
+                <ul class="list-disc list-inside space-y-2">
+                    <li><strong>Pergunta:</strong> "Qual a velocidade de surgimento de novos casos?"</li>
+                    <li><strong>Analogia:</strong> É como um <strong>filme</strong>, que mostra os novos eventos acontecendo.</li>
+                    <li><strong>Estudo associado:</strong> Coorte.</li>
+                </ul>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-md border border-gray-200">
+                <h3 class="text-xl font-bold text-amber-700 mb-3">Prevalência 📸</h3>
+                <p class="mb-4">Mede o número total de casos <strong>EXISTENTES</strong> (novos + antigos) de uma doença em um ponto específico no tempo.</p>
+                <ul class="list-disc list-inside space-y-2">
+                    <li><strong>Pergunta:</strong> "Qual a carga da doença na população agora?"</li>
+                    <li><strong>Analogia:</strong> É como uma <strong>fotografia</strong>, que captura todos que estão doentes no momento.</li>
+                    <li><strong>Estudo associado:</strong> Transversal.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- FLUXOGRAMA INTERATIVO -->
+    <section id="fluxograma" class="mb-12 p-6 bg-white rounded-xl shadow-md">
+        <h2 class="text-2xl font-bold text-slate-700 border-b-2 border-slate-300 pb-2 mb-6">Navegue pelos Tipos de Estudo</h2>
+        <div class="flex items-start">
+            <!-- Nível 1 -->
+            <a href="#" class="block bg-slate-700 text-white font-bold py-3 px-5 rounded-lg shadow-lg">Estudos</a>
+            <!-- Nível 2 -->
+            <div class="ml-12 pt-2 space-y-16">
+                <!-- Observacionais -->
+                <div class="flex items-start">
+                    <a href="#observacionais" class="block bg-sky-600 text-white py-2 px-4 rounded-lg shadow-md flow-main">Observacionais</a>
+                    <!-- Nível 3 -->
+                    <div class="ml-12 space-y-8">
+                        <!-- Descritivos -->
+                        <div class="flex items-start">
+                             <a href="#descritivos" class="block bg-sky-400 text-sky-900 py-2 px-4 rounded-lg shadow-sm flow-branch">Descritivos</a>
+                             <!-- Nível 4 -->
+                             <div class="ml-12 space-y-2">
+                                <a href="#relato-caso" class="block bg-sky-200 text-sky-800 py-1 px-3 rounded-md shadow-sm flow-branch text-sm hover:bg-sky-300">Relato de Caso</a>
+                                <a href="#serie-casos" class="block bg-sky-200 text-sky-800 py-1 px-3 rounded-md shadow-sm flow-branch text-sm hover:bg-sky-300">Série de Casos</a>
+                             </div>
+                        </div>
+                         <!-- Analíticos -->
+                        <div class="flex items-start">
+                            <a href="#analiticos" class="block bg-green-500 text-white py-2 px-4 rounded-lg shadow-sm flow-branch">Analíticos</a>
+                            <!-- Nível 4 -->
+                             <div class="ml-12 space-y-2">
+                                <a href="#transversal" class="block bg-green-200 text-green-800 py-1 px-3 rounded-md shadow-sm flow-branch text-sm hover:bg-green-300">Transversal</a>
+                                <a href="#caso-controle" class="block bg-green-200 text-green-800 py-1 px-3 rounded-md shadow-sm flow-branch text-sm hover:bg-green-300">Caso-Controle</a>
+                                <a href="#coorte" class="block bg-green-200 text-green-800 py-1 px-3 rounded-md shadow-sm flow-branch text-sm hover:bg-green-300">Coorte</a>
+                                <a href="#ecologico" class="block bg-green-200 text-green-800 py-1 px-3 rounded-md shadow-sm flow-branch text-sm hover:bg-green-300">Ecológico</a>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+                 <!-- Experimentais -->
+                <div class="flex items-start">
+                    <a href="#experimentais" class="block bg-purple-600 text-white py-2 px-4 rounded-lg shadow-md flow-main">Experimentais</a>
+                    <!-- Nível 3 -->
+                    <div class="ml-12 space-y-2">
+                        <a href="#ecr" class="block bg-purple-200 text-purple-800 py-1 px-3 rounded-md shadow-sm flow-branch text-sm hover:bg-purple-300">Ensaio Clínico Randomizado</a>
+                        <a href="#ensaio-campo" class="block bg-purple-200 text-purple-800 py-1 px-3 rounded-md shadow-sm flow-branch text-sm hover:bg-purple-300">Ensaio de Campo</a>
+                        <a href="#ensaio-comunitario" class="block bg-purple-200 text-purple-800 py-1 px-3 rounded-md shadow-sm flow-branch text-sm hover:bg-purple-300">Ensaio Comunitário</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ESTUDOS OBSERVACIONAIS -->
+    <section id="observacionais" class="mb-12">
+        <h2 class="text-2xl font-bold text-slate-700 border-b-2 border-slate-300 pb-2 mb-6">
+            <span class="bg-slate-200 text-slate-700 px-2 py-1 rounded-md">I. Estudos Observacionais</span>
+        </h2>
+        <p class="text-center bg-white p-4 rounded-lg shadow-sm mb-8 text-slate-600">O pesquisador <strong>não interfere</strong>, apenas observa, descreve e analisa os fenômenos que ocorrem naturalmente.</p>
+        
+        <!-- Descritivos -->
+        <div id="descritivos" class="mb-8">
+            <h3 class="text-xl font-semibold text-slate-600 mb-4 ml-2">A. Descritivos (Geram hipóteses)</h3>
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Relato de Caso -->
+                <div id="relato-caso" class="bg-white p-6 rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition-shadow duration-300">
+                    <h4 class="text-lg font-bold text-blue-700 mb-3">Relato de Caso</h4>
+                    <ul class="list-disc list-inside space-y-2 mb-4">
+                        <li><strong>Foco:</strong> Um único indivíduo.</li>
+                        <li><strong>Objetivo:</strong> Descrever uma doença rara, manifestação atípica ou associação inusitada.</li>
+                        <li><strong>Utilidade:</strong> Sinaliza algo novo, servindo como ponto de partida para investigações futuras.</li>
+                    </ul>
+                    <div class="bg-blue-50 border-l-4 border-blue-500 text-blue-800 p-4 rounded-r-lg">
+                        <p class="font-semibold">✍️ Exemplo:</p>
+                        <p class="text-sm">Um dermatologista publica um artigo detalhando o caso de um paciente que desenvolveu uma lesão de pele nunca antes vista após o uso de um novo cosmético.</p>
+                    </div>
+                </div>
+
+                <!-- Série de Casos -->
+                <div id="serie-casos" class="bg-white p-6 rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition-shadow duration-300">
+                    <h4 class="text-lg font-bold text-blue-700 mb-3">Série de Casos</h4>
+                    <ul class="list-disc list-inside space-y-2 mb-4">
+                        <li><strong>Foco:</strong> Um pequeno grupo de indivíduos com a mesma condição.</li>
+                        <li><strong>Objetivo:</strong> Descrever características comuns de um conjunto de casos.</li>
+                        <li><strong>Utilidade:</strong> Identifica padrões que um único caso não revelaria. Não possui grupo controle.</li>
+                    </ul>
+                    <div class="bg-blue-50 border-l-4 border-blue-500 text-blue-800 p-4 rounded-r-lg">
+                        <p class="font-semibold">✍️ Exemplo:</p>
+                        <p class="text-sm">Um hospital descreve as características clínicas e laboratoriais dos cinco primeiros pacientes diagnosticados com uma nova variante viral.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Analíticos -->
+        <div id="analiticos">
+            <h3 class="text-xl font-semibold text-slate-600 mb-4 ml-2">B. Analíticos (Testam hipóteses)</h3>
+            <div class="space-y-6">
+                <!-- Transversal -->
+                <div id="transversal" class="bg-white p-6 rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition-shadow duration-300">
+                    <h4 class="text-lg font-bold text-green-700 mb-3">Transversal (Seccional) 📸</h4>
+                    <ul class="list-disc list-inside space-y-2 mb-4">
+                        <li><strong>Temporalidade:</strong> "Fotografia" de um momento. Exposição e desfecho são medidos <strong>simultaneamente</strong>.</li>
+                        <li><strong>Principal Medida:</strong> Calcula a <strong>prevalência</strong> de uma doença e/ou exposição.</li>
+                        <li><strong>Medida de Associação:</strong> Razão de Prevalência (RP).</li>
+                    </ul>
+                    <div class="bg-green-50 border-l-4 border-green-500 text-green-800 p-4 rounded-r-lg mb-4">
+                        <p class="font-semibold">✍️ Exemplo:</p>
+                        <p class="text-sm">Realizar um inquérito em uma universidade para verificar, no mesmo dia, a prevalência de ansiedade e o número de horas de estudo entre os alunos.</p>
+                    </div>
+                    <div class="bg-yellow-50 border-l-4 border-yellow-500 text-yellow-800 p-4 rounded-r-lg">
+                        <p class="font-bold">⚠️ Ponto de Atenção:</p>
+                        <p class="text-sm">Não estabelece relação de causa e efeito, pois não define quem veio primeiro (exposição ou doença). É o famoso "problema do ovo e da galinha".</p>
+                    </div>
+                </div>
+
+                <!-- Caso-Controle -->
+                <div id="caso-controle" class="bg-white p-6 rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition-shadow duration-300">
+                    <h4 class="text-lg font-bold text-green-700 mb-3">Caso-Controle</h4>
+                    <ul class="list-disc list-inside space-y-2 mb-4">
+                        <li><strong>Direcionalidade:</strong> <strong>Retrospectivo</strong>. Parte do desfecho (doença) para investigar a exposição no passado.</li>
+                        <li><strong>Grupos:</strong> Compara um grupo com a doença (<strong>casos</strong>) com um grupo sem a doença (<strong>controles</strong>).</li>
+                        <li><strong>Ideal para:</strong> Doenças raras ou com longo período de latência.</li>
+                        <li><strong>Medida de Associação:</strong> Odds Ratio (OR) ou Razão de Chances.</li>
+                    </ul>
+                     <div class="bg-green-50 border-l-4 border-green-500 text-green-800 p-4 rounded-r-lg mb-4">
+                        <p class="font-semibold">✍️ Exemplo:</p>
+                        <p class="text-sm">Para investigar a associação entre o uso de adoçantes artificiais e câncer de bexiga, pesquisadores selecionam pacientes com a doença (casos) e indivíduos sem (controles) e os entrevistam sobre seu consumo de adoçantes no passado.</p>
+                    </div>
+                    <div class="bg-yellow-50 border-l-4 border-yellow-500 text-yellow-800 p-4 rounded-r-lg">
+                        <p class="font-bold">⚠️ Ponto de Atenção:</p>
+                        <p class="text-sm">Vulnerável ao viés de memória (recordação), pois depende da lembrança correta dos participantes sobre exposições passadas.</p>
+                    </div>
+                </div>
+
+                <!-- Coorte -->
+                <div id="coorte" class="bg-white p-6 rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition-shadow duration-300">
+                    <h4 class="text-lg font-bold text-green-700 mb-3">Coorte 🎥</h4>
+                    <ul class="list-disc list-inside space-y-2 mb-4">
+                        <li><strong>Direcionalidade:</strong> Geralmente <strong>prospectivo</strong> ("filme"). Parte da exposição e acompanha os grupos ao longo do tempo para observar o surgimento do desfecho.</li>
+                        <li><strong>Grupos:</strong> Compara um grupo de <strong>expostos</strong> a um fator com um grupo de <strong>não expostos</strong>.</li>
+                        <li><strong>Principal Medida:</strong> Calcula a <strong>incidência</strong> e o risco de desenvolver uma doença.</li>
+                        <li><strong>Medida de Associação:</strong> Risco Relativo (RR).</li>
+                    </ul>
+                     <div class="bg-green-50 border-l-4 border-green-500 text-green-800 p-4 rounded-r-lg mb-4">
+                        <p class="font-semibold">✍️ Exemplo:</p>
+                        <p class="text-sm">Um estudo acompanha por 30 anos um grupo de trabalhadores expostos a amianto e um grupo de trabalhadores de escritório para comparar a incidência de câncer de pulmão entre eles.</p>
+                    </div>
+                    <div class="bg-yellow-50 border-l-4 border-yellow-500 text-yellow-800 p-4 rounded-r-lg">
+                        <p class="font-bold">💡 Dica:</p>
+                        <p class="text-sm">É o melhor desenho observacional para inferir causalidade. Existe a Coorte Retrospectiva (ou histórica), que usa dados de registros do passado para fazer o mesmo seguimento.</p>
+                    </div>
+                </div>
+
+                <!-- Ecológico -->
+                <div id="ecologico" class="bg-white p-6 rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition-shadow duration-300">
+                    <h4 class="text-lg font-bold text-green-700 mb-3">Ecológico</h4>
+                    <ul class="list-disc list-inside space-y-2 mb-4">
+                        <li><strong>Unidade de Análise:</strong> <strong>Populações</strong> ou grupos agregados (cidades, estados, países), não indivíduos.</li>
+                        <li><strong>Objetivo:</strong> Comparar a frequência de doenças e exposições entre diferentes populações.</li>
+                        <li><strong>Vantagem:</strong> Rápido e barato, pois utiliza dados secundários já existentes.</li>
+                    </ul>
+                    <div class="bg-green-50 border-l-4 border-green-500 text-green-800 p-4 rounded-r-lg mb-4">
+                        <p class="font-semibold">✍️ Exemplo:</p>
+                        <p class="text-sm">Analisar a correlação entre a venda de sorvetes e o número de casos de afogamento em diferentes cidades litorâneas durante o verão.</p>
+                    </div>
+                    <div class="bg-red-50 border-l-4 border-red-500 text-red-800 p-4 rounded-r-lg">
+                        <p class="font-bold">🚨 Alerta Máximo: Falácia Ecológica!</p>
+                        <p class="text-sm">Não se pode assumir que a associação encontrada para o grupo vale para o indivíduo. No exemplo, não significa que as pessoas que se afogaram foram as que tomaram sorvete.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ESTUDOS EXPERIMENTAIS -->
+     <section id="experimentais" class="mb-12">
+        <h2 class="text-2xl font-bold text-slate-700 border-b-2 border-slate-300 pb-2 mb-6">
+            <span class="bg-slate-200 text-slate-700 px-2 py-1 rounded-md">II. Estudos Experimentais (de Intervenção)</span>
+        </h2>
+        <p class="text-center bg-white p-4 rounded-lg shadow-sm mb-8 text-slate-600">O pesquisador <strong>interfere ativamente</strong>, manipulando a exposição para testar o efeito de uma intervenção.</p>
+        <div class="space-y-6">
+            <!-- Ensaio Clínico Randomizado -->
+            <div id="ecr" class="bg-white p-6 rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition-shadow duration-300">
+                <h4 class="text-lg font-bold text-purple-700 mb-3">Ensaio Clínico Randomizado (ECR)</h4>
+                <ul class="list-disc list-inside space-y-2 mb-4">
+                    <li><strong>Pilar Principal:</strong> A alocação dos participantes nos grupos (intervenção vs. controle/placebo) é <strong>aleatória (randomizada)</strong>.</li>
+                    <li><strong>Objetivo:</strong> Testar a eficácia e a segurança de novas intervenções (medicamentos, terapias, vacinas).</li>
+                    <li><strong>Nível de Evidência:</strong> Considerado o <strong>padrão-ouro</strong> para estabelecer causalidade.</li>
+                </ul>
+                <div class="bg-purple-50 border-l-4 border-purple-500 text-purple-800 p-4 rounded-r-lg">
+                    <p class="font-semibold">✍️ Exemplo:</p>
+                    <p class="text-sm">Para testar um novo medicamento para diabetes, pacientes são sorteados: um grupo recebe o novo fármaco e o outro grupo recebe o tratamento padrão (ou placebo). Os níveis de glicemia são comparados após 6 meses.</p>
+                </div>
+            </div>
+
+            <!-- Ensaio de Campo -->
+            <div id="ensaio-campo" class="bg-white p-6 rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition-shadow duration-300">
+                <h4 class="text-lg font-bold text-purple-700 mb-3">Ensaio de Campo</h4>
+                <ul class="list-disc list-inside space-y-2 mb-4">
+                    <li><strong>População-alvo:</strong> Indivíduos <strong>saudáveis</strong>, mas com risco de desenvolver uma doença.</li>
+                    <li><strong>Ambiente:</strong> Ocorre "no campo", ou seja, na comunidade, não em um ambiente controlado como um hospital.</li>
+                    <li><strong>Objetivo:</strong> Avaliar a eficácia de medidas preventivas.</li>
+                </ul>
+                <div class="bg-purple-50 border-l-4 border-purple-500 text-purple-800 p-4 rounded-r-lg">
+                    <p class="font-semibold">✍️ Exemplo:</p>
+                    <p class="text-sm">Testar a eficácia de uma nova vacina contra a dengue em milhares de crianças e adultos saudáveis que vivem em uma área endêmica.</p>
+                </div>
+            </div>
+
+            <!-- Ensaio Comunitário -->
+            <div id="ensaio-comunitario" class="bg-white p-6 rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition-shadow duration-300">
+                <h4 class="text-lg font-bold text-purple-700 mb-3">Ensaio Comunitário</h4>
+                <ul class="list-disc list-inside space-y-2 mb-4">
+                    <li><strong>Unidade de Intervenção:</strong> A intervenção é aplicada em <strong>comunidades inteiras</strong>, não em indivíduos isoladamente.</li>
+                    <li><strong>Objetivo:</strong> Avaliar a eficácia de intervenções em saúde pública que têm natureza coletiva.</li>
+                </ul>
+                <div class="bg-purple-50 border-l-4 border-purple-500 text-purple-800 p-4 rounded-r-lg">
+                    <p class="font-semibold">✍️ Exemplo:</p>
+                    <p class="text-sm">Duas cidades são selecionadas. Em uma, é implementado um programa educativo intensivo sobre prevenção de doenças cardíacas (intervenção); na outra, não (controle). As taxas de mortalidade por infarto são comparadas após 10 anos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MEDIDAS DE ASSOCIAÇÃO -->
+    <section id="medidas-associacao">
+        <h2 class="text-2xl font-bold text-slate-700 border-b-2 border-slate-300 pb-2 mb-6">
+            <span class="bg-slate-200 text-slate-700 px-2 py-1 rounded-md">III. Medidas de Associação</span>
+        </h2>
+        <p class="text-center bg-white p-4 rounded-lg shadow-sm mb-8 text-slate-600">Quantificam a relação entre uma exposição e um desfecho (doença).</p>
+        
+        <!-- Tabela 2x2 -->
+        <div class="bg-white p-6 rounded-xl shadow-md border border-gray-200 mb-6">
+            <h4 class="text-lg font-bold text-gray-700 mb-3">A Tabela de Contingência (2x2)</h4>
+            <p class="text-sm text-gray-600 mb-4">É a base para calcular as principais medidas de associação em estudos analíticos.</p>
+            <div class="overflow-x-auto">
+                <table class="w-full text-center border-collapse">
+                    <thead>
+                        <tr>
+                            <th class="border p-2"></th>
+                            <th class="border p-2 bg-red-100">Doentes (Desfecho +)</th>
+                            <th class="border p-2 bg-green-100">Não Doentes (Desfecho -)</th>
+                            <th class="border p-2 bg-gray-200">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="border p-2 bg-orange-100 font-bold">Expostos (Fator +)</td>
+                            <td class="border p-2 font-mono text-lg">a</td>
+                            <td class="border p-2 font-mono text-lg">b</td>
+                            <td class="border p-2 bg-gray-100 font-bold">a + b</td>
+                        </tr>
+                        <tr>
+                            <td class="border p-2 bg-blue-100 font-bold">Não Expostos (Fator -)</td>
+                            <td class="border p-2 font-mono text-lg">c</td>
+                            <td class="border p-2 font-mono text-lg">d</td>
+                            <td class="border p-2 bg-gray-100 font-bold">c + d</td>
+                        </tr>
+                         <tr>
+                            <td class="border p-2 bg-gray-200 font-bold">Total</td>
+                            <td class="border p-2 bg-gray-100 font-bold">a + c</td>
+                            <td class="border p-2 bg-gray-100 font-bold">b + d</td>
+                            <td class="border p-2 bg-gray-300 font-bold">a+b+c+d</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="space-y-6">
+            <!-- Risco Relativo -->
+            <div class="bg-white p-6 rounded-xl shadow-md border border-gray-200">
+                <h4 class="text-lg font-bold text-indigo-700 mb-3">Risco Relativo (RR)</h4>
+                <ul class="list-disc list-inside space-y-2 mb-4">
+                    <li><strong>O que é:</strong> Compara o risco (incidência) de adoecer entre os expostos com o risco de adoecer entre os não expostos.</li>
+                    <li><strong>Estudo principal:</strong> Coorte.</li>
+                    <li><strong>Fórmula:</strong> <code class="font-mono bg-gray-200 px-2 py-1 rounded">RR = [a / (a+b)] / [c / (c+d)]</code></li>
+                    <li><strong>Interpretação:</strong>
+                        <ul class="list-decimal list-inside ml-4 mt-2 text-sm">
+                            <li><strong>RR > 1:</strong> A exposição é um <strong>fator de risco</strong>. (Ex: RR = 2 significa que o risco de adoecer é 2 vezes maior nos expostos).</li>
+                            <li><strong>RR = 1:</strong> A exposição <strong>não tem associação</strong> com a doença (efeito nulo).</li>
+                            <li><strong>RR < 1:</strong> A exposição é um <strong>fator de proteção</strong>.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- Odds Ratio -->
+            <div class="bg-white p-6 rounded-xl shadow-md border border-gray-200">
+                <h4 class="text-lg font-bold text-indigo-700 mb-3">Odds Ratio (OR) / Razão de Chances</h4>
+                <ul class="list-disc list-inside space-y-2 mb-4">
+                    <li><strong>O que é:</strong> É a razão da chance de um caso ter sido exposto pela chance de um controle ter sido exposto. É uma estimativa do Risco Relativo.</li>
+                    <li><strong>Estudo principal:</strong> Caso-Controle.</li>
+                    <li><strong>Fórmula:</strong> <code class="font-mono bg-gray-200 px-2 py-1 rounded">OR = (a * d) / (b * c)</code> (produtos cruzados)</li>
+                    <li><strong>Interpretação:</strong> Similar à do Risco Relativo. Um OR de 3 significa que a chance de ter a doença é 3 vezes maior entre os expostos.</li>
+                </ul>
+            </div>
+            <!-- Razão de Prevalência -->
+             <div class="bg-white p-6 rounded-xl shadow-md border border-gray-200">
+                <h4 class="text-lg font-bold text-indigo-700 mb-3">Razão de Prevalência (RP)</h4>
+                <ul class="list-disc list-inside space-y-2 mb-4">
+                    <li><strong>O que é:</strong> Compara a prevalência da doença entre os expostos com a prevalência entre os não expostos.</li>
+                    <li><strong>Estudo principal:</strong> Transversal.</li>
+                    <li><strong>Fórmula:</strong> <code class="font-mono bg-gray-200 px-2 py-1 rounded">RP = [a / (a+b)] / [c / (c+d)]</code></li>
+                    <li><strong>Interpretação:</strong> Similar à do Risco Relativo, mas aplicada à prevalência. Uma RP de 1,5 significa que a prevalência da doença é 50% maior no grupo exposto.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+</body>
+</html>
+
